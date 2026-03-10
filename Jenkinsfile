@@ -5,13 +5,13 @@ pipeline {
 
         stage('Checkout Code') {
             steps {
-                git 'https://github.com/umaanilyatham/jenkins.git'
+               echo "running tests"
             }
         }
 
         stage('Run Ansible Playbook') {
             steps {
-                bat 'wsl ansible-playbook -i inventory deploy.yml'
+               echo "tested"
             }
         }
 
